@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: health-care
-          image: mohankumar12/health-care  # Replace with your actual image
+          image: mohankumar12/healthcare  # Replace with your actual image
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8082

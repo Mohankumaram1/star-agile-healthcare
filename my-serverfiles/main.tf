@@ -28,7 +28,4 @@
   provisioner "local-exec" {
     command = "ansible-playbook /var/lib/jenkins/workspace/health_care/my-serverfiles/health-playbook.yml"
   }
-provisioner "local-exec" {
-    command = "ansible-playbook /var/lib/jenkins/workspace/health_care/my-serverfiles/healthdeployment.yml"
-  }
 }

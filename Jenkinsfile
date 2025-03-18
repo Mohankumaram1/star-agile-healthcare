@@ -22,7 +22,7 @@ pipeline {
     }
    stage('Docker Image Creation') {
       steps {
-        sh 'docker build -t mohankumar12/healthcare .'
+        sh 'docker build -t mohankumar12/healthcare:1.0 .'
             }
     }
      stage('DockerLogin') {
@@ -34,7 +34,7 @@ pipeline {
     } 
    stage('Push Image to DockerHub') {
       steps {
-        sh 'docker push mohankumar12/healthcare'
+        sh 'docker push mohankumar12/healthcare:1.0'
             }
    }
     
@@ -48,13 +48,6 @@ pipeline {
         }
       }
     }
-       stage('Deploy to k8s'){
-            steps{
-                script{
-                     kubernetesDeploy (configs: 'deploymentservice.yml' ,kubeconfigId: 'kubernetesconf')
-                   
-       }
-     }  
+    
    } 
-  }
   }

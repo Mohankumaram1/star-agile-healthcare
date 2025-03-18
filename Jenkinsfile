@@ -5,6 +5,7 @@ pipeline {
 
   tools {
     maven 'M2_HOME'
+  }
 
   stages {
     stage('CheckOut') {
@@ -35,6 +36,7 @@ pipeline {
       steps {
         sh 'docker push mohankumar12/healthcare'
             }
+   }
     
     stage ('Configure Test-server with Terraform, Ansible and then Deploying') {
       steps {
@@ -55,4 +57,4 @@ pipeline {
      }  
    } 
   }
-}
+  }

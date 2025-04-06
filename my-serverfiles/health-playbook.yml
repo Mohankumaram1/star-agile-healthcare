@@ -88,6 +88,6 @@
       command: bash /tmp/installK8S.sh
 
     - name: Join worker node to the Kubernetes cluster
-      command: kubeadm join 172.31.2.127:6443 --cri-socket unix:///var/run/cri-dockerd.sock --token xfcgx8.s5cagnk27qfkl0en --discovery-token-ca-cert-hash sha256:8650844814f8059a3c8d6e44c7d02f28931656c9b8ab019c2ebc8119c2c0324e
+      command: kubeadm join 172.31.6.100:6443 --cri-socket unix:///var/run/cri-dockerd.sock --token gt35qi.jb4nnu89e6ps43kj --discovery-token-ca-cert-hash sha256:e7b6105beb70ce0eb76cd260f9573ee77471a1369432d8f97df5000a2938e18c
       args:
         creates: /etc/kubernetes/kubelet.conf
